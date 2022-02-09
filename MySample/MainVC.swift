@@ -8,7 +8,7 @@
 import UIKit
 
 class MainVC: UIViewController {
-
+    //test
     @IBOutlet var tableView: UITableView!
     
     var data = [Sample(title: "CoreData Demo", source: "CoreDataVC"),
