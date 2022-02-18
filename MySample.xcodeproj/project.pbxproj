@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		07A3B4AF10DB6EF06907CDE7 /* Pods_MySample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32ECA0D7CBC1D4D64A2D4E1E /* Pods_MySample.framework */; };
 		9AB097B5993D8538F0C16202 /* Pods_MySample_MySampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C5428889C0D914CE99532EE /* Pods_MySample_MySampleUITests.framework */; };
+		AB3121F727BF4D67006BBB7F /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3121F627BF4D67006BBB7F /* Film.swift */; };
+		AB3121F927BF4DA5006BBB7F /* Films.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3121F827BF4DA5006BBB7F /* Films.swift */; };
+		AB3121FB27BF5154006BBB7F /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3121FA27BF5154006BBB7F /* TestData.swift */; };
 		B0120799278FC0A9002C7087 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0120798278FC0A9002C7087 /* AppDelegate.swift */; };
 		B012079D278FC0A9002C7087 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B012079C278FC0A9002C7087 /* ViewController.swift */; };
 		B01207A0278FC0A9002C7087 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B012079E278FC0A9002C7087 /* Main.storyboard */; };
@@ -54,6 +57,9 @@
 		3EDB063D8CC3ED38EC56BF93 /* Pods-MySample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySample.release.xcconfig"; path = "Target Support Files/Pods-MySample/Pods-MySample.release.xcconfig"; sourceTree = "<group>"; };
 		8C5428889C0D914CE99532EE /* Pods_MySample_MySampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MySample_MySampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9132252577F2A53F35FE8B3A /* Pods-MySampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MySampleTests.debug.xcconfig"; path = "Target Support Files/Pods-MySampleTests/Pods-MySampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AB3121F627BF4D67006BBB7F /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		AB3121F827BF4DA5006BBB7F /* Films.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Films.swift; sourceTree = "<group>"; };
+		AB3121FA27BF5154006BBB7F /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		B0120795278FC0A9002C7087 /* MySample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0120798278FC0A9002C7087 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B012079C278FC0A9002C7087 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +140,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AB3121F527BF4D58006BBB7F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB3121F627BF4D67006BBB7F /* Film.swift */,
+				AB3121F827BF4DA5006BBB7F /* Films.swift */,
+				AB3121FA27BF5154006BBB7F /* TestData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B012078C278FC0A9002C7087 = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +175,7 @@
 		B0120797278FC0A9002C7087 /* MySample */ = {
 			isa = PBXGroup;
 			children = (
+				AB3121F527BF4D58006BBB7F /* Model */,
 				B0120798278FC0A9002C7087 /* AppDelegate.swift */,
 				B01207CB278FC294002C7087 /* MainVC.swift */,
 				B01207CC278FC294002C7087 /* MainVC.xib */,
@@ -442,12 +459,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B012079D278FC0A9002C7087 /* ViewController.swift in Sources */,
+				AB3121FB27BF5154006BBB7F /* TestData.swift in Sources */,
+				AB3121F927BF4DA5006BBB7F /* Films.swift in Sources */,
 				B01207CD278FC294002C7087 /* MainVC.swift in Sources */,
 				B01207A3278FC0A9002C7087 /* MySample.xcdatamodeld in Sources */,
 				B01207DD27905584002C7087 /* SQLiteVC.swift in Sources */,
 				B0120799278FC0A9002C7087 /* AppDelegate.swift in Sources */,
 				B01207E227B189DE002C7087 /* AlamofirerSample.swift in Sources */,
 				B01207D5278FC86B002C7087 /* MainCell.swift in Sources */,
+				AB3121F727BF4D67006BBB7F /* Film.swift in Sources */,
 				B01207D927905564002C7087 /* CoreDataVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -628,7 +648,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L4X8VVB9GP;
+				DEVELOPMENT_TEAM = GX3FFUHJ56;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MySample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -658,7 +678,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L4X8VVB9GP;
+				DEVELOPMENT_TEAM = GX3FFUHJ56;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MySample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

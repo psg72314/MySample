@@ -12,7 +12,7 @@ class AlamofirerSample: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        requestTest()
+        requestTest2()
         // Do any additional setup after loading the view.
     }
 
@@ -63,5 +63,37 @@ class AlamofirerSample: UIViewController {
 
         }
         
+    }
+    
+    func requestTest2()
+    {
+        let parameters: Parameters = ["mode": "piG7qs5Taf3E1Meh/RiQOw=="]
+        
+        AF.request("https://app.police.taipei/Handler.ashx", method: .get, parameters: parameters).responseDecodable(of: TestData.self) { (response) in
+            
+            switch response.result
+            {
+            case .success(_): if let td = response.value {
+                
+                print("test data:\(td.data)")
+            }
+                case .failure(_): break
+            }
+            
+        }
+//        AF.request("http://www.google", method: .get, parameters: parameters).responseDecodable{
+//            (response: DataResponse<T>) in
+//            switch response.result
+//            {
+//                case .success(_):
+//                    if let JSON = response.result.value as? [String: Any] {
+//                                    let status = JSON["completed"] as! Bool
+//                                    print(status)
+//                                }
+//                case .failure(_): break
+//
+//            }
+//
+//        }
     }
 }
